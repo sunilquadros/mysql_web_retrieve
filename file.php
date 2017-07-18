@@ -30,9 +30,21 @@ if ($result->num_rows > 0) {
         //echo " \n";
          //  $id = $row["id"];
         $instructorNumber = $row["$instructorNumber"];
+        $instructorName =  $row["instructorName"];
+        $email = $row["email"];
+        $city =  $row["city"];
+        $state = $row["state"];
+        $postalCode =  $row["postalCode"];
+        $country = $row["country"];
         echo "  <div style='margin:30px 0px;'>
         // Id: $id<br />
            Instructor Number: $instructorNumber<br />
+           Instructor Name: $instructorName<br />
+           Email: $email<br />
+           City: $city<br />
+           State: $state<br />
+           Postal Code: $postalCode<br />
+           Country: $country<br />
            </div>
            ";
    }
