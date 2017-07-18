@@ -20,14 +20,21 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
    // output data of each row
    while($row = $result->fetch_assoc()) {
-          echo "InNum:- " . $row["instructorNumber"]. " " ;
-          echo "InName:- " . $row["instructorName"]. " " ;
-          echo "Email:- " . $row["email"]. " " ;
-          echo "City:- " . $row["city"]. " " ;
-          echo "State:- " .  $row["state"]. " " ;
-          echo "PostalCode:- " . $row["postalCode"]. " " ;
-          echo "Country:- " . $row["country"]. " " ;
-        echo " \n";
+        //  echo "InNum:- " . $row["instructorNumber"]. " " ;
+        //  echo "InName:- " . $row["instructorName"]. " " ;
+        //  echo "Email:- " . $row["email"]. " " ;
+        //  echo "City:- " . $row["city"]. " " ;
+        //  echo "State:- " .  $row["state"]. " " ;
+        //  echo "PostalCode:- " . $row["postalCode"]. " " ;
+        //  echo "Country:- " . $row["country"]. " " ;
+        //echo " \n";
+         //  $id = $row["id"];
+        $instructorNumber = $row["$instructorNumber"];
+        echo "  <div style='margin:30px 0px;'>
+        // Id: $id<br />
+           Instructor Number: $instructorNumber<br />
+           </div>
+           ";
    }
 } else {
    echo "0 results";
